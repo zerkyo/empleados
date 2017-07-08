@@ -48,6 +48,9 @@
             <th data-field="colonia">Colonia</th>
             <th data-field="cp">Código Postal</th>                                
             <th data-field="estado">Estado</th>
+            <th data-field="latitud">latitud</th>
+            <th data-field="longitud">Longitd</th>
+            <th data-field="botones"></th>
             
         </tr>
         </thead>
@@ -88,16 +91,13 @@
 
         });
 
-        var mapOptions = {
-            center: new google.maps.LatLng(25.80, -80.30),
-        zoom: 10,
-        mapTypeId: google.maps.MapTypeId.ROADMAP};
-        var map = new google.maps.Map(document.getElementById("map"),mapOptions);
 
-    
+
         
+
                 
 
     });
+    
 </script>
 

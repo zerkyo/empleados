@@ -105,7 +105,9 @@ class HomeController extends Controller {
 		    $domicilios->numero_interior = $request->input('num_int');
 		    $domicilios->colonia = $request->input('colonia');
 		    $domicilios->cp = $request->input('cp');		  
-		    $domicilios->estado = $request->input('estado');  				  
+		    $domicilios->estado = $request->input('estado');
+		    $domicilios->latitud = $request->input('latitud');
+		    $domicilios->longitud = $request->input('longitud');  				  
 
 		    $domicilios->save();
 		    }
@@ -132,7 +134,10 @@ class HomeController extends Controller {
 							'numero_interior' => $dato->numero_interior,
 							'colonia' => $dato->colonia,
 							'cp' => $dato->cp,
-							'estado' => $dato->estado
+							'estado' => $dato->estado,
+							'latitud' => $dato->latitud,
+							'longitud' => $dato->longitud,
+							'botones' => '<button onclick="carga_mapa('.$dato->latitud.', '.$dato->longitud.')"  type="button" class="btn btn-info btn-xs" style="margin:3px;"><i class="fa fa-check" aria-hidden="true"></i>Ver mapa</button>'
 						);
 
 		}		

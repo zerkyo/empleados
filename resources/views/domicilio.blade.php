@@ -78,7 +78,21 @@
                         </span>
                     @endif
                 </div>
-            </div>           
+            </div> 
+             <div class="form-group">
+                <label for="longitud" class="col-md-4 control-label">Logintd</label>
+
+                <div class="col-md-6">
+                    <input id="longitud" type="text" class="form-control" name="longitud" value="" required autofocus>                   
+                </div>
+            </div>
+             <div class="form-group">
+                <label for="latitud" class="col-md-4 control-label">Latitud</label>
+
+                <div class="col-md-6">
+                    <input id="latitud" type="text" class="form-control" name="latitud" value="" required autofocus>                   
+                </div>
+            </div>          
             <br>
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
@@ -108,9 +122,9 @@
             url:"agrega_dom/" + $("#id_empleado").val(),
             type:'post',
             data:{calle: $("#calle").val(), num_ext: $("#num_ext").val(), num_int: $("#num_int").val(), colonia: $("#colonia").val(),
-            cp: $("#cp").val(),estado: $("#estado").val() },
+            cp: $("#cp").val(),estado: $("#estado").val(),latitud: $("#latitud").val(),longitud: $("#longitud").val() },
             success:function(data){                       
-               //console.log(data);
+               //console.log(data); 
                 alert(data);                           
                 $('#modal_empleado').modal('hide');
                 $("#tab_usuarios").bootstrapTable('refresh');
